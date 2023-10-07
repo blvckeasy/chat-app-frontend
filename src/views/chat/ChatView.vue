@@ -4,4 +4,4 @@
 
 <script src="./chat.js"></script>
 
-<style src="./chat.css"></style>
+<style src="./chat.css" scoped></style>
