@@ -69,6 +69,8 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    margin-left: 15px;
+    margin-top: 3px;
 }
 
 .send-button {
