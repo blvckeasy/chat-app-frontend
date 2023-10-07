@@ -1,0 +1,94 @@
+.container {
+    margin: auto;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    width: 440px;
+    height: 580px;
+    justify-content: center;
+}
+
+.remember-me-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.register-title {
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.email-title, .password-title, .confirm-password-title {
+    margin-top: 45px;
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.password-title {
+    margin-top: 30px;
+}
+
+.email-input, .password-input, .confirm-password-input {
+    display: flex;
+    height: 25px;
+    padding: 15px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: #F3F4F6;
+    font-size: 18px;
+    border: none;
+}
+
+.remember-me-box {
+    margin: 30px 0;
+}
+
+.remember-me {
+    width: 25px;
+    height: 25px;
+    width: 25px;
+    height: 25px;
+    border: none;
+}
+
+.remember-me-label {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.send-button {
+    display: flex;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 6px;
+    background: var(--Primary, #4F46E5);
+    box-shadow: 0px 30px 60px 0px rgba(79, 70, 229, 0.15);
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.signin-link {
+    text-decoration: none;
+    align-self: self-end;
+    margin-bottom: 30px;
+}
