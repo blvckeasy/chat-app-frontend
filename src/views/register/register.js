@@ -14,6 +14,7 @@ export default {
         RememberMe,
         Button,
         Link,
-        InputTitle
+        InputTitle,
+        Box
     }
 }

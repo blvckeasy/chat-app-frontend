@@ -2,15 +2,15 @@
     <Box class="container">
         <PageTitle>Login</PageTitle>
 
-        <InputTitle>Email</InputTitle>
-        <Input type="text" placeholder="Enter your email"/>
+        <InputTitle>Username</InputTitle>
+        <Input type="text" @input="usernameChanged" placeholder="Enter your username"/>
 
         <InputTitle>Password</InputTitle>
-        <Input type="password" placeholder="Enter your password"/>
+        <Input type="password" @input="passwordChanged" placeholder="Enter your password"/>
 
-        <RememberMe/>
+        <RememberMe @input="rememberMeChecked"/>
         <Link href="/register">Create account?</Link>
-        <Button>Send</Button>
+        <Button @click="sendData">Send</Button>
     </Box>
 </template>
 

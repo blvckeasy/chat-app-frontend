@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "cross-env NODE_ENV=development vite",
+    "start": "cross-env NODE_ENV=production vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
