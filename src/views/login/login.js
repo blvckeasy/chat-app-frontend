@@ -47,7 +47,7 @@ export default {
     },
     async sendData() {
       console.log('hello')
-      const response = await fetch(backendURL + '/api/v1/auth/signin', {
+      const response = await fetch(backendURL + '/auth/signin', {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
@@ -67,7 +67,7 @@ export default {
       
       localStorage.setItem("user", JSON.stringify(user))
       localStorage.setItem("token", JSON.stringify(token))
-      window.location = '/'
+      window.location.href = '/'
     },
     rememberMeChecked (event) {
       this.rememberMe = event.target.checked

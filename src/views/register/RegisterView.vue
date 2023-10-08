@@ -3,17 +3,17 @@
         <PageTitle>Register</PageTitle>
 
         <InputTitle>Email</InputTitle>
-        <Input type="text" placeholder="Enter your email"/>
+        <Input type="text" @input="usernameChanged" placeholder="Enter your email"/>
 
         <InputTitle>Password</InputTitle>
-        <Input type="password" placeholder="Enter your password"/>
+        <Input type="password" @input="passwordChanged" placeholder="Enter your password"/>
 
         <InputTitle>Confirm Password</InputTitle>
-        <Input type="password" placeholder="Retry password"/>
+        <Input type="password" @input="confirmPasswordChanged" placeholder="Retry password"/>
 
         <RememberMe/>
         <Link href="/login">Create account?</Link>
-        <Button>Send</Button>
+        <Button @click="sendData">Send</Button>
     </Box>
 </template>
 
