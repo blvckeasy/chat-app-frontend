@@ -67,7 +67,7 @@ export default {
       
       localStorage.setItem("user", JSON.stringify(user))
       localStorage.setItem("token", JSON.stringify(token))
-      window.location.href = '/'
+      window.location.href = '/chat'
     },
     rememberMeChecked (event) {
       this.rememberMe = event.target.checked
