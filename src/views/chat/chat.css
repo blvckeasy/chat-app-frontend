@@ -70,12 +70,48 @@ ul {
 }
 
 .chat > .chat-dashboard {
+    background-image: url('https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/Desktop.png');
+    height: 94%;
+    background-repeat: no-repeat;
+    background-size: auto 750px;
     border: 1px solid orange;
-    height: 100%;
-    /* width: 100px; */
 }
 
+.chat > .message-send-box > .message-input {
+    width: 750px;
+    height: 40px;
+    font-size: 18px;
+    margin: 0 20px;
+    margin-top: 5px;
+    height: 26px;
+    padding: 8px 16px;
+    align-items: center;
+    margin-left: 30px;
+    border-radius: 5px;
+    background: var(--Light-grey, #efefef);
+    border: none;
+}
 
+.chat > .message-send-box > .send-button {
+    width: 80px;
+    height: 40px;
+    background-color: rgb(0, 136, 255);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 5px #999;
+}
+
+.chat > .message-send-box > .send-button:hover {
+    background-color: rgb(1, 117, 219);
+}
+
+.chat > .message-send-box > .send-button:active {
+    background-color: rgb(0, 98, 184);
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+}
 
 /* custom scrollbar */
 ::-webkit-scrollbar {

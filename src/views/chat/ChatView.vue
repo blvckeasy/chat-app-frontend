@@ -32,6 +32,10 @@
                 </div>
             </div>
             <div class="chat-dashboard"></div>
+            <div class="message-send-box">
+                <input type="text" class="message-input" placeholder="Message">
+                <button class="send-button">Send</button>
+            </div>
         </div>
     </div>
 </template>
