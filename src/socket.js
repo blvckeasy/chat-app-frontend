@@ -1,12 +1,13 @@
 import { reactive } from "vue";
 import { io } from "socket.io-client";
+import { backendApiURL, productionBackendApiURL } from '../config.js'
 
 const state = reactive({
   connected: false,
   fooEvents: [],
   barEvents: [],
 });
-const URL = process.env.NODE_ENV === "production" ? "https://blvckeasy-chat-app-958ea6ae15b1.herokuapp.com" : "http://localhost:8080";
+const URL = process.env.NODE_ENV === "production" ? productionBackendApiURL : backendApiURL;
 var socket;
 
 

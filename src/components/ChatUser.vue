@@ -100,7 +100,7 @@
     }
 
     .user-chat-active {
-        background-color: #d0d0d0;
+        background-color: #dedddd;
     }
 
     .users:hover {
@@ -108,7 +108,7 @@
     }
 
     .users:active {
-        background-color: #9d9d9d;
+        background-color: #b1b1b1;
     }
 </style>
 
