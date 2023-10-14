@@ -70,6 +70,8 @@ ul {
 }
 
 .chat > .chat-dashboard {
+    display: flex;
+    flex-direction: column;
     background-image: url('https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/Desktop.png');
     height: 94%;
     background-repeat: no-repeat;
@@ -115,20 +117,56 @@ ul {
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
-    border-radius: 20px;
-    border: 6px solid transparent;
-    background-clip: content-box;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #a8bbbf;
-  }
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+
+
+/* message */
+
+.message-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 12px;  
+    font-size: 18px;
+    color: black;
+    border: white;
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    margin: 10px 20px;
+}
+
+.message-utils {
+    display: flex;
+    flex-direction: row;
+    align-self: self-end;
+    font-size: 12px;
+    width: 70px;
+    justify-content: space-around;
+}
+
+.my-message {
+    background-color: #78E378;
+    color: white;
+    align-self: self-end;
+}

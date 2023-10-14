@@ -1,25 +1,28 @@
 import ChatUser from '@/components/ChatUser.vue'
-import { backendURL } from '@/../config.js'
+import Message from '@/components/Message.vue'
+import MessagesList from '@/components/MessagesList.vue'
+import ChatUsersList from '@/components/ChatUsersList.vue'
 import { socket } from '@/socket.js'
 
 
 export default {
     components: {
         ChatUser,
+        Message,
+        MessagesList,
+        ChatUsersList,
     },
     data() {
         return {
-            users: [],
             access_token: null
         }
     },
     setup() {
         return {
             user: {
-                fullname: "islom abdurahmonov",
-                lastMessage: "hello",
-                sendedDate: "19:42",
-                newMessageCount: 1,
+                fullname: "blvckeasy",
+                surname: "islom abdurahmonov",
+                lastMessage: "hello world",
             }
         }
     },
@@ -32,22 +35,5 @@ export default {
         this.access_token = access_token
 
         socket.connect();
-
-        this.getUsers();
-    },
-    methods: {
-        async getUsers() {
-            const repsonse = await fetch(backendURL + '/user/all', {
-                method: "GET",
-                headers: {
-                    token: this.access_token
-                }
-            });
-            
-            const { error, users } = await repsonse.json()
-            if (error) return alert(error.message);
-
-            console.log(users);
-        },
     },
 }

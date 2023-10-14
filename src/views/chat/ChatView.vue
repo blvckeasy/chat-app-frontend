@@ -7,21 +7,7 @@
                 </svg>
                 <input type="text" placeholder="Search" class="search-input">
             </div>
-            <ul class="users-list">
-                <ChatUser :user="user" class="user-chat-active"/>
-                <ChatUser :user="user" />
-                <ChatUser :user="user" />
-                <ChatUser :user="user" />
-                <ChatUser :user="user" />
-                <ChatUser :user="user" />
-                <ChatUser :user="user" />
-                <ChatUser :user="user" />
-                <ChatUser :user="user" />
-                <ChatUser :user="user" />
-                <ChatUser :user="user" />
-                <ChatUser :user="user" />
-                <ChatUser :user="user" />
-            </ul>
+            <ChatUsersList />
         </div>
         <div class="chat">
             <div class="user-footer">
@@ -31,7 +17,7 @@
                     <p class="user-info-status">last seen 5 mins ago</p>
                 </div>
             </div>
-            <div class="chat-dashboard"></div>
+            <MessagesList/>
             <div class="message-send-box">
                 <input type="text" class="message-input" placeholder="Message">
                 <button class="send-button">Send</button>

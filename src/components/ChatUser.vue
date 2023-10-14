@@ -1,10 +1,10 @@
 <template>
     <li class="users">
-        <img class="message-profile-image" src="https://picsum.photos/500/500" alt="profile image">
+        <img class="message-profile-image" :src="'http://localhost:8080/' + (user.profile_img_url || 'profile.jpg')" alt="profile image">
         <div class="title">
             <div class="user-title">
-                <h3 class="fullname">{{ user.fullname }}</h3>
-                <p class="message">{{ user.lastMessage }}</p>
+                <h3 class="fullname">{{ user.username }}</h3>
+                <p class="message">{{ user.lastMessage.message?.slice(0, 20) + (user.lastMessage.message?.length > 32 ? "..." : "") }}</p>
             </div>
             <div class="time-count">
                 <p class="time">{{ user.sendedDate }}</p>
@@ -94,4 +94,14 @@
     .user-chat-active {
         background-color: #d0d0d0;
     }
+
+    .users:hover {
+        background-color: #d8d8d8;
+    }
+
+    .users:active {
+        background-color: #9d9d9d;
+    }
 </style>
+
+how to put the value obtained from the parameter in props to the src parameter of the image?
