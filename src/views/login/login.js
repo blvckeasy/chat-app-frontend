@@ -5,7 +5,7 @@ import Button from '@/components/Button.vue'
 import Link from '@/components/Link.vue'
 import InputTitle from '@/components/InputTitle.vue'
 import Box from '@/components/Box.vue'
-import { backendURL } from '@/../config.js'
+import { backendApiURL } from '@/../config.js'
 
 export default {
   components: {
@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     async getData() {
-      const data = await fetch(backendURL, {
+      const data = await fetch(backendApiURL, {
         method: "GET",
       });
       console.log(await data.json());
@@ -47,7 +47,7 @@ export default {
     },
     async sendData() {
       console.log('hello')
-      const response = await fetch(backendURL + '/auth/signin', {
+      const response = await fetch(backendApiURL + '/auth/signin', {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'

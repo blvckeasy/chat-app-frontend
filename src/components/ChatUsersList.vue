@@ -6,7 +6,7 @@
 
 <script>
     import ChatUser from '@/components/ChatUser.vue'
-    import { backendURL } from '@/../config.js'
+    import { backendApiURL } from '@/../config.js'
     import { ref, onMounted } from 'vue';
 
     export default {
@@ -22,7 +22,7 @@
             }
 
             onMounted(async () => {
-                const repsonse = await fetch(backendURL + '/user/all', {
+                const repsonse = await fetch(backendApiURL + '/user/all', {
                     method: "GET",
                     headers: {
                         token: access_token

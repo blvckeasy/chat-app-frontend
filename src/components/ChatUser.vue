@@ -1,6 +1,6 @@
 <template>
     <li class="users">
-        <img class="message-profile-image" :src="'http://localhost:8080/' + (user.profile_img_url || 'profile.jpg')" alt="profile image">
+        <img class="message-profile-image" :src="backendURL + (user.profile_img_url || 'profile.jpg')" alt="profile image">
         <div class="title">
             <div class="user-title">
                 <h3 class="fullname">{{ user.username }}</h3>
@@ -15,8 +15,16 @@
 </template>
 
 <script>
+    import { backendURL } from '@/../config.js'
+    
     export default {
+
       props: ['user'],
+      data() {
+        return {
+            backendURL
+        }
+      }
     }
 </script>
 

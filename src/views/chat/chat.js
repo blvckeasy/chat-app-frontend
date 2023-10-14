@@ -17,15 +17,6 @@ export default {
             access_token: null
         }
     },
-    setup() {
-        return {
-            user: {
-                fullname: "blvckeasy",
-                surname: "islom abdurahmonov",
-                lastMessage: "hello world",
-            }
-        }
-    },
     mounted() {
         const access_token = JSON.parse(localStorage.getItem("token") || "{}").access_token
 

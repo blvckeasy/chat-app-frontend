@@ -5,7 +5,7 @@ import Button from '@/components/Button.vue'
 import Link from '@/components/Link.vue'
 import InputTitle from '@/components/InputTitle.vue'
 import Box from '@/components/Box.vue'
-import { backendURL } from '@/../config.js'
+import { backendApiURL } from '@/../config.js'
 
 
 export default {
@@ -43,7 +43,7 @@ export default {
         },
         
         async sendData() {
-            const response = await fetch(backendURL + '/auth/signup', {
+            const response = await fetch(backendApiURL + '/auth/signup', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
