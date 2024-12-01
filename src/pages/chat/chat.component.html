@@ -1,0 +1,45 @@
+<div class="container flex">
+    <ul class="menu bg-base-200 rounded-box flex flex-col items-center">
+        <li class="menu-title">Chat App</li>
+        <li class="flex flex-row items-center">
+            <a>
+                <img src="./imgs/default-avatar.png" class="profile-avatar mr-2" alt="Profile Picture" id="preview">
+                <span class="fullname">Eshmat Toshmatov</span>
+                <span class="badge badge-success text-white font-bold p-2 flex">2+</span>
+            </a>
+        </li>
+    </ul>
+    <div class="chat-container flex flex-col">
+        <div class="chat-navbar flex flex-row items-center">
+            <img src="./imgs/default-avatar.png" class="profile-avatar mr-5" alt="Profile Picture" id="preview">
+            <div class="user-info flex flex-col">
+                <span class="fullname">Eshmat Toshmatov</span>
+                <span class="status">online</span>
+            </div>
+        </div>
+        <div class="chat-list w-full mt-10 pr-10 pl-10 h-full">
+            <div class="chat chat-start">
+                <div class="chat-bubble flex flex-col">
+                    <p class="message">It's over Anakin, I have the high ground.</p>
+                    <div class="message-info self-end mt-2">
+                        <span class="badge mr-2">20:23</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chat chat-end">
+                <div class="chat-bubble flex flex-col">
+                    <p class="message">Hi!</p>
+                    <div class="message-info self-end mt-2">
+                        <span class="badge mr-2">20:23</span>
+                        <span class="badge">✔</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="send-message-form flex flex-row items-center w-10/12 justify-between self-center mt-5 mb-5">
+            <input type="text" placeholder="Xabar yuboring..." class="input input-bordered w-10/12" />
+            <button class="btn btn-primary">Jo'natish</button>
+        </div>
+    </div>
+</div>

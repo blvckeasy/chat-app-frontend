@@ -1,0 +1,28 @@
+.menu {
+    height: 100vh;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.chat-navbar {
+    border: 2px solid rgb(53, 53, 53);
+    width: 100vh;
+    padding: 10px 20px;
+}
+
+.fullname {
+    font-weight: bold;
+}
+
+.status {
+    font-size: 13px;
+    color: rgb(0, 255, 0);
+}
+
+.menu {
+    min-width: 260px;
+}
