@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 100vh;
+    margin: auto auto;
+}
+
+.input {
+    margin-bottom: 20px;
+}
+
+app-link {
+    margin: 0 auto;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,36 @@
+<div class="container">
+    <h1 class="text-4xl font-bold text-center mb-5">Ro'yxatdan o'tish sahifasi.</h1>
+
+    <label class="input flex justify-between items-center gap-2 h-20">
+        Profil rasmi:
+        <div class="profile-pic-container">
+            <label for="file-input" class="profile-pic">
+              <img src="./imgs/default-avatar.png" alt="Profile Picture" id="preview">
+              <input type="file" id="file-input" accept="image/*" />
+            </label>
+        </div>
+        <span class="badge badge-info">ixtiyoriy</span>
+    </label>
+
+    <label class="input input-bordered flex items-center gap-2">
+        <b>Ism Familiya:</b>
+        <input type="text" class="grow" placeholder="Eshmat Toshmatov" />
+        <span class="badge badge-error">majburiy</span>
+    </label>
+    <label class="input input-bordered flex items-center gap-2">
+        <b>Username:</b>&#64;
+        <input type="text" class="grow" placeholder="looser" />
+        <span class="badge badge-error">majburiy</span>
+    </label>
+    <label class="input input-bordered flex items-center gap-2">
+        <b>Parol:</b>
+        <input type="password" class="grow" placeholder="********" />
+        <span class="badge badge-error">majburiy</span>
+    </label>
+    <app-link
+        href="/signin"
+        text="Tizimga kirish uchun bosing."
+    />
+    <button class="btn btn-success">Ro'yxatdan o'tish</button>
+
+</div>
