@@ -1,45 +1,70 @@
 <div class="container flex">
     <ul class="menu bg-base-200 rounded-box flex flex-col items-center">
         <li class="menu-title">Chat App</li>
-        <li class="flex flex-row items-center">
-            <a>
-                <img src="./imgs/default-avatar.png" class="profile-avatar mr-2" alt="Profile Picture" id="preview">
-                <span class="fullname">Eshmat Toshmatov</span>
-                <span class="badge badge-success text-white font-bold p-2 flex">2+</span>
-            </a>
-        </li>
+
+        @for (user of users; track user._id) {
+            <li class="flex flex-row items-center" (click)="chatSelected(user)">
+                <a>
+                    <img [src]="backendPhotoUrl + (user.profile_img_path || 'default-avatar.png')" class="profile-avatar mr-2" alt="Profile Picture" id="preview">
+                    <div class="flex flex-col">
+                        <span class="username">{{ user.username }}</span>
+                        <span class="fullname">{{ user.fullname }}</span>
+                    </div>
+                    <!-- <span class="badge badge-success text-white font-bold p-2 flex">9</span> -->
+                </a>
+            </li>
+        }
+
     </ul>
     <div class="chat-container flex flex-col">
-        <div class="chat-navbar flex flex-row items-center">
-            <img src="./imgs/default-avatar.png" class="profile-avatar mr-5" alt="Profile Picture" id="preview">
-            <div class="user-info flex flex-col">
-                <span class="fullname">Eshmat Toshmatov</span>
-                <span class="status">online</span>
+        <div class="chat-navbar flex flex-row items-center justify-between">
+            <div class="flex flex-row">
+                @if (active_user) {
+                    <img [src]="active_user.profile_img_path ? backendPhotoUrl + active_user.profile_img_path : backendPhotoUrl + 'default-avatar.png'" class="profile-avatar mr-5" alt="Profile Picture" id="preview">
+                    <div class="user-info flex flex-col">
+                        <span class="fullname">{{ active_user.fullname }} ({{active_user.username}})</span>
+                        <span class="status">online</span>
+                    </div>
+                }
+            </div>
+            <div class="navbar-utils">
+                <app-link href="/singup" text="Chiqish"></app-link>
             </div>
         </div>
-        <div class="chat-list w-full mt-10 pr-10 pl-10 h-full">
-            <div class="chat chat-start">
-                <div class="chat-bubble flex flex-col">
-                    <p class="message">It's over Anakin, I have the high ground.</p>
-                    <div class="message-info self-end mt-2">
-                        <span class="badge mr-2">20:23</span>
+        <div #chatContainer class="chat-list w-full mt-10 pr-10 pl-10 overflow-y-scroll" style="height: 78vh;">
+            @if (!messages.length) {
+                <p class="absolute top-1/2 left-1/2">Xabarlar topilmadi(</p>
+            }
+
+            @for (message of messages; track message._id) {
+                @if (message.from_user_id != user._id) {
+                    <div class="chat chat-start">
+                        <div class="chat-bubble flex flex-col">
+                            <p class="message">{{ message.message }}</p>
+                            <div class="message-info self-end mt-2">
+                                <span class="badge mr-2">{{ message.sended_time }}</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="chat chat-end">
-                <div class="chat-bubble flex flex-col">
-                    <p class="message">Hi!</p>
-                    <div class="message-info self-end mt-2">
-                        <span class="badge mr-2">20:23</span>
-                        <span class="badge">✔</span>
+                } @else {
+                    <div class="chat chat-end">
+                        <div class="chat-bubble flex flex-col">
+                            <p class="message">{{ message.message }}</p>
+                            <div class="message-info self-end mt-2">
+                                <span class="badge mr-2">{{ message.sended_time }}</span>
+                                <span class="badge">{{ message.is_readable ? "✔✔" : "✔"}}</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                }
+            }            
         </div>
 
-        <div class="send-message-form flex flex-row items-center w-10/12 justify-between self-center mt-5 mb-5">
-            <input type="text" placeholder="Xabar yuboring..." class="input input-bordered w-10/12" />
-            <button class="btn btn-primary">Jo'natish</button>
-        </div>
+        @if (active_user) {
+            <div class="send-message-form flex flex-row items-center w-10/12 justify-between self-center mt-5 mb-5">
+                <input #messageInput type="text" placeholder="Xabar yuboring..." class="input input-bordered w-10/12" [(ngModel)]="messageValue" />
+                <button class="btn btn-primary" (click)="sendMessage()">Jo'natish</button>
+            </div>
+        }
     </div>
 </div>

@@ -14,8 +14,13 @@
     padding: 10px 20px;
 }
 
-.fullname {
+.username {
     font-weight: bold;
+}
+
+.fullname {
+    font-weight: normal;
+    font-size: 12px;
 }
 
 .status {

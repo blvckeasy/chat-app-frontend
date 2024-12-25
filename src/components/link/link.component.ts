@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -10,10 +10,12 @@ import { RouterLink } from '@angular/router';
     templateUrl: './link.component.html',
     styleUrl: './link.component.css',
 })
-export class LinkComponent {
+export class LinkComponent implements OnInit {
 	@Input()
 	href: string = "#";
 
 	@Input()
 	text: string = "link"
+
+	ngOnInit(): void {}
 }
