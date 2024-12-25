@@ -5,7 +5,7 @@ import { UserService } from '../../services/user.service';
 import { MessagesService } from '../../services/messages.service';
 import { SocketService } from "../../services/socket.service";
 import { IMessage } from '../../interfaces/message.interfaces';
-import { environment } from '../../environment/environment';
+import { environment } from '../../environments/environment.development';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../environment/environment';
+import { environment } from '../environments/environment.development';
 import { io, Socket } from "socket.io-client";
 import { Observable } from 'rxjs';
 
@@ -12,7 +12,7 @@ export class SocketService {
 
     constructor() {
         if (!this.token) return;
-        
+
         this.socket = io(environment.socketUrl, {
             extraHeaders: {
                 token: this.token,
